@@ -1,0 +1,59 @@
+# Report on Binary Search Tree (BST) Program
+
+## Introduction
+This report outlines a C++ program that implements a Binary Search Tree (BST) with essential functionalities such as insertion, 
+deletion, searching, and various tree traversals. The program provides a menu-driven interface for the user to interact with the BST.
+
+## Structure Overview
+
+### TreeNode Structure
+- TreeNode is a basic structure representing nodes in the BST.
+- Each node contains an integer key and pointers to its left and right children.
+- A constructor initializes a node with a given key and sets the child pointers to nullptr.
+
+### BinarySearchTree Class
+- BinarySearchTree encapsulates the BST operations and maintains the root node.
+- Core functionalities include:
+  - insert(int key): Inserts a key into the BST.
+  - deleteNode(int key): Deletes a node with the specified key.
+  - search(int key): Searches for a node with the specified key.
+  - inorder(), preorder(), postorder(): Perform in-order, pre-order, and post-order traversals, respectively.
+
+### Private Helper Methods
+- insertRec(TreeNode* node, int key): Recursive helper for insertion.
+- deleteRec(TreeNode* root, int key): Recursive helper for deletion.
+- minValueNode(TreeNode* node): Finds the node with the minimum key in a subtree.
+- searchRec(TreeNode* node, int key): Recursive helper for searching.
+- inorderRec(TreeNode* root), preorderRec(TreeNode* root), postorderRec(TreeNode* root): Recursive helpers for traversals.
+
+## Main Function
+The main function provides a user interface to interact with the BST:
+- Displays a menu with options to insert, search, traverse, and delete nodes, or exit the program.
+- Handles user inputs to perform the corresponding BST operations.
+- Uses a loop to continuously prompt the user for actions until they choose to exit.
+
+## Features
+
+### Insertion
+- Prompts the user to input the number of nodes to insert.
+- Allows multiple node insertions in one go.
+
+### Deletion
+- Allows the user to delete a node by specifying its key.
+- Handles deletion cases: node with no children, one child, and two children.
+
+### Search
+- Searches for a node by its key and notifies if the node is found or not.
+
+### Traversals
+- In-order: Left subtree, root, right subtree.
+- Pre-order: Root, left subtree, right subtree.
+- Post-order: Left subtree, right subtree, root.
+
+## User Interface
+- Menu-driven approach for ease of use.
+- Prompts for necessary inputs and provides feedback for each operation.
+
+## Conclusion
+This BST program is a comprehensive implementation with a user-friendly interface for basic tree operations. 
+It effectively demonstrates fundamental BST concepts and can be used as a learning tool or a basis for more advanced tree operations.
